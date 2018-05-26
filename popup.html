@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="assets/styles.css" type="text/css" media="all"/>
+  <link rel="stylesheet" href="assets/styles-popup.css" type="text/css" media="all"/>
+  <title>Quick Tabs</title>
+</head>
+<body>
+<div id="tools" class="tools"></div>
+<div class="qs_wrapper">
+  <input type="text" name="search" value="" class ="qs_input" id="searchbox" placeholder="Search" autocomplete="off" tabindex="1" autofocus/>
+</div>
+<div class="content" tabindex="2">
+  <div id="content-list">
+  </div>
+</div>
+
+<script id="template" type="x-tmpl-mustache">
+  {{#tabs}}
+    <div class="item tab open" id="{{id}}">
+      <div class="{{tabImageStyle}}">
+        <img src="{{templateTabImage}}" width="16" height="16" border="0">
+      </div>
+      <div>
+        <div class="title" title="{{{templateTooltip}}}">{{{templateTitle}}}</div>
+        <div class="url">{{{templateUrl}}}</div>
+      </div>
+    </div>
+  {{/tabs}}
+</script>
+<script type="text/javascript" src="js/fuse.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/mustache.min.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+
+</body>
+</html>

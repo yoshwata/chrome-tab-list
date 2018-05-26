@@ -1,11 +1,22 @@
 {
-  "name": "Context Menus Sample (with Event Page)",
+  "name": "Chrome tab list",
   "description": "Shows some of the features of the Context Menus API using an event page",
   "version": "0.7",
-  "permissions": ["contextMenus", "tabs"],
+  "permissions": ["tabs"],
   "background": {
     "persistent": false,
-    "scripts": ["sample.js", "background.js"]
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+1",
+        "mac": "Command+1"
+      }
+    }
   },
   "manifest_version": 2
 }

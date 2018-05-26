@@ -1,0 +1,121 @@
+body {
+  width: 360px;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  line-height: 1.25;
+}
+
+.qs_input {
+  font-size: 12px;
+  font-family: arial, sans-serif;
+  padding: 8px 5px 7px 5px;
+  margin: 0;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #4285f4;
+}
+
+#tools {
+  margin: 0;
+}
+
+div.template {
+  width: 100%;
+  position:relative;
+  top:0;
+}
+
+.withfocus b {
+  color:white;
+}
+
+.item:hover b {
+  color:white;
+}
+
+.item {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  clear:both;
+  height: 30px;
+  cursor: hand;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.item > div:last-child {
+    height: 100%;
+}
+
+div.tabimage {
+	float: left;
+}
+
+div.tabimage img {
+  vertical-align: middle;
+  padding: 4px 4px 3px 4px;
+  margin: 3px 5px 0 5px;
+  border-radius: 3px;
+}
+
+div.hideicon img {
+  display: none;
+}
+
+div.hideicon {
+  width: 4px;
+  height: 25px;
+}
+
+div.title {
+  padding-top: 2px;
+  color: #212121;
+}
+
+div.title, div.url {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+div.content {
+  outline: 0;
+  margin: 0 0 0 0;
+  padding: 0;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.item:hover, .item:hover div.title, div.closed.item:hover div.title,
+.item:hover div.url {
+  background-color: #1c9fd3;
+  color: white;
+}
+
+img {
+  padding-top: 4px;
+  background-color: white;
+}
+
+div.url {
+  display:block;
+  font-size: 9px;
+  color: #455A64;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar:vertical {
+  border-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  -webkit-border-image: url(scrollbar.png) 12 0 12 0;
+  border-width: 12px 0;
+  min-height: 20px;
+}
